@@ -7,10 +7,11 @@ import { View } from "react-native";
 import { SplashScreen } from "../SplachScreen";
 import { Step1 } from "./Step-1";
 import { Step2 } from "./Step-2";
+import { Step3 } from "./Step-3";
 
-type Screen = "step1" | "step2";
+type Screen = "step1" | "step2" | "step3";
 
-const screens: Screen[] = ["step1", "step2"];
+const screens: Screen[] = ["step1", "step2", "step3"];
 
 export function StepsScreen() {
   const [splashVisible, setSplashVisible] = useState(true);
@@ -35,7 +36,11 @@ export function StepsScreen() {
       )}
 
       {currentScreen === "step2" && (
-        <Step2 onNext={() => router.replace("/homeScreen")} />
+        <Step2 onNext={() => setCurrentScreen("step3")} />
+      )}
+
+      {currentScreen === "step3" && (
+        <Step3 onNext={() => router.replace("/homeScreen")} />
       )}
 
       <View className="flex-row mt-5 absolute bottom-5">
