@@ -4,10 +4,10 @@ type Props = {
   onNext: () => void;
 };
 
-export function ComoFunciona({ onNext }: Props) {
+export function Step2({ onNext }: Props) {
   return (
     <View>
-      <Text>Como Funciona</Text>
+      <Text>Sobre</Text>
       <Button title="Próximo" onPress={onNext} />
     </View>
   );

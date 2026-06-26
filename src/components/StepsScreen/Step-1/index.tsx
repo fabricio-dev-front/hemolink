@@ -4,7 +4,7 @@ type Props = {
   onNext: () => void;
 };
 
-export function Campanha({ onNext }: Props) {
+export function Step1({ onNext }: Props) {
   return (
     <View>
       <Text>Campanha</Text>

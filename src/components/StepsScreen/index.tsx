@@ -1,20 +1,20 @@
 "use client";
 
+import { router } from "expo-router";
 import { useEffect, useState } from "react";
 
 import { View } from "react-native";
 import { SplashScreen } from "../SplachScreen";
-import { Campanha } from "./Campanha/Campanha";
-import { ComoFunciona } from "./ComoFunciona/ComoFunciona";
-import { Sobre } from "./Sobre/Sobre";
+import { Step1 } from "./Step-1";
+import { Step2 } from "./Step-2";
 
-type Screen = "Splash" | "sobre" | "campanha" | "comoFunciona";
+type Screen = "step1" | "step2";
 
-const screens: Screen[] = ["comoFunciona", "sobre", "campanha"];
+const screens: Screen[] = ["step1", "step2"];
 
 export function StepsScreen() {
   const [splashVisible, setSplashVisible] = useState(true);
-  const [currentScreen, setCurrentScreen] = useState<Screen>("sobre");
+  const [currentScreen, setCurrentScreen] = useState<Screen>("step1");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,16 +30,12 @@ export function StepsScreen() {
 
   return (
     <View className="flex-1 bg-white justify-center items-center">
-      {currentScreen === "sobre" && (
-        <Sobre onNext={() => setCurrentScreen("campanha")} />
+      {currentScreen === "step1" && (
+        <Step1 onNext={() => setCurrentScreen("step2")} />
       )}
 
-      {currentScreen === "campanha" && (
-        <Campanha onNext={() => setCurrentScreen("comoFunciona")} />
-      )}
-
-      {currentScreen === "comoFunciona" && (
-        <ComoFunciona onNext={() => setCurrentScreen("sobre")} />
+      {currentScreen === "step2" && (
+        <Step2 onNext={() => router.replace("/homeScreen")} />
       )}
 
       <View className="flex-row mt-5 absolute bottom-5">
