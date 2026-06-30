@@ -1,16 +1,45 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { IconGolaSague } from "../../assets/icons/golaSague";
 
 export function SplashScreen() {
   return (
-    <View className="flex-1 bg-redPrimary items-center justify-center">
-      <View className="items-center justify-center">
+    <View style={styles.container}>
+      <View style={styles.innerContainer}>
         <IconGolaSague color="#ffffff" height={300} width={300} />
-        <View className="flex-row">
-          <Text className="text-[58px] text-textPrimary font-bold">Doe</Text>
-          <Text className="text-redSecondary absolute -right-10 -top-5 font-bold text-[58px]">+</Text>
+        <View style={styles.row}>
+          <Text style={styles.logoText}>Doe</Text>
+          <Text style={styles.plusText}>+</Text>
         </View>
       </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#ED2939",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  innerContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  row: {
+    flexDirection: "row",
+  },
+  logoText: {
+    fontSize: 58,
+    color: "#F0F0F0",
+    fontWeight: "bold",
+  },
+  plusText: {
+    color: "#960018",
+    position: "absolute",
+    right: -40,
+    top: -20,
+    fontWeight: "bold",
+    fontSize: 58,
+  },
+});
