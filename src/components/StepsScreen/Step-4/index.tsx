@@ -1,9 +1,9 @@
 import { Text, View } from "react-native";
 
-export function Step2() {
+export function Step4() {
   return (
     <View>
-      <Text>Sobre</Text>
+      <Text>Step4</Text>
     </View>
   );
 }

@@ -10,7 +10,8 @@ module.exports = {
         offwhite: "#F0F0F0",
         textPrimary: "#F0F0F0",
         textSecondary: "#555555",
-      }
+        secondary: "#e31b23",
+      },
     },
   },
   plugins: [],
