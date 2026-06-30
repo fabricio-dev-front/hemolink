@@ -4,12 +4,15 @@ import { StyleSheet, Text, View } from 'react-native';
 export function Step1() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
-        Cada doação pode salvar até <Text style={styles.textRed}>4 vidas!</Text>
-      </Text>
-      <Text style={styles.subtitle}>
-        Um pequeno gesto pode gerar um impacto gigante.{' '}
-      </Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>
+          Cada doação pode salvar até{' '}
+          <Text style={styles.textRed}>4 vidas!</Text>
+        </Text>
+        <Text style={styles.subtitle}>
+          Um pequeno gesto pode gerar um impacto gigante.{' '}
+        </Text>
+      </View>
 
       <Image
         source={require('../../../assets/img/hand-blood.png')}
@@ -22,13 +25,15 @@ export function Step1() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 16,
   },
+  textContainer: {
+    maxWidth: 315,
+  },
   image: {
     width: 400,
-    height: 370,
+    height: 450,
   },
   text: {
     fontSize: 24,
@@ -36,6 +41,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000000',
     maxWidth: 315,
+    marginTop: 45,
+    marginBottom: 10,
   },
   subtitle: {
     fontSize: 16,
