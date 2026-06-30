@@ -81,6 +81,9 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
+    height: "100%",
+    overflow: "hidden",
   },
   footer: {
     flexDirection: "column",

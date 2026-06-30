@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingHorizontal: 16,
+    overflow: 'hidden',
   },
   textContainer: {
     maxWidth: 315,
