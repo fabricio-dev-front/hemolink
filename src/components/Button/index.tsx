@@ -15,9 +15,7 @@ export function ButtonComponent({
       className={`bg-secondary rounded-[13px] px-[60px] py-4 items-center ${className ?? ""}`}
       {...props}
     >
-      <Text className="text-textSecondary text-[18px] font-medium">
-        {children}
-      </Text>
+      <Text className="text-textPrimary text-[18px] font-bold">{children}</Text>
     </Pressable>
   );
 }
