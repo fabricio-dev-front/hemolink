@@ -58,7 +58,7 @@ export function StepsScreen() {
                 styles.dot,
                 {
                   backgroundColor:
-                    currentScreen === screen ? "#FF0000" : "#D9D9D9",
+                    currentScreen === screen ? "#E31B23" : "#D9D9D9",
                 },
               ]}
             />

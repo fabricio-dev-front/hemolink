@@ -1,20 +1,20 @@
-import { Pressable, PressableProps, StyleProp, StyleSheet, Text, ViewStyle } from "react-native";
+import {
+  Pressable,
+  PressableProps,
+  StyleProp,
+  StyleSheet,
+  Text,
+  ViewStyle,
+} from "react-native";
 
 type ButtonProps = PressableProps & {
   style?: StyleProp<ViewStyle>;
   children: React.ReactNode;
 };
 
-export function ButtonComponent({
-  style,
-  children,
-  ...props
-}: ButtonProps) {
+export function ButtonComponent({ style, children, ...props }: ButtonProps) {
   return (
-    <Pressable
-      style={[styles.button, style]}
-      {...props}
-    >
+    <Pressable style={[styles.button, style]} {...props}>
       <Text style={styles.text}>{children}</Text>
     </Pressable>
   );
@@ -22,7 +22,7 @@ export function ButtonComponent({
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "#e31b23",
+    backgroundColor: "#E31B23",
     borderRadius: 13,
     paddingHorizontal: 60,
     paddingVertical: 16,
