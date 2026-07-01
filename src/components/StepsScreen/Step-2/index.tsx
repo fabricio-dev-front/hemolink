@@ -1,17 +1,17 @@
-import { Image } from 'expo-image';
-import { useEffect, useRef, useState } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
-import { IconBloodCollar } from '../../../assets/icons/IconBloodCollar';
-import { IconCalendar } from '../../../assets/icons/IconCalendar';
-import { IconHearth } from '../../../assets/icons/IconHearth';
-import { IconShare } from '../../../assets/icons/IconShare';
+import { Image } from "expo-image";
+import { useEffect, useRef, useState } from "react";
+import { Animated, StyleSheet, Text, View } from "react-native";
+import { IconBloodCollar } from "../../../assets/icons/IconBloodCollar";
+import { IconCalendar } from "../../../assets/icons/IconCalendar";
+import { IconHearth } from "../../../assets/icons/IconHearth";
+import { IconShare } from "../../../assets/icons/IconShare";
 
 const DOADORES_AVATAR = [
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80',
-  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&h=100&q=80',
-  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80',
-  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100&q=80',
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80',
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80",
+  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&h=100&q=80",
+  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80",
+  "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100&q=80",
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80",
 ];
 
 function DoadoresFotos() {
@@ -89,9 +89,9 @@ export function Step2() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <Text style={styles.headerTitle}>
-          Crie e participe de{' '}
+          Crie e participe de{" "}
           <Text style={styles.headerTitleRed}>campanhas</Text>
-          {'\n'}
+          {"\n"}
           de doação!
         </Text>
       </View>
@@ -118,7 +118,7 @@ export function Step2() {
                   {
                     width: progressAnim.interpolate({
                       inputRange: [0, 100],
-                      outputRange: ['0%', '100%'],
+                      outputRange: ["0%", "100%"],
                     }),
                   },
                 ]}
@@ -155,146 +155,147 @@ export function Step2() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    width: '100%',
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
   },
   headerContainer: {
-    maxWidth: '80%',
-    marginTop: 45,
+    maxWidth: "80%",
+    // marginTop: 45,
     marginBottom: 15,
   },
   headerTitle: {
     fontSize: 28,
-    fontWeight: '600',
-    color: '#000000',
-    textAlign: 'center',
+    fontWeight: "600",
+    color: "#000000",
+    textAlign: "center",
   },
   headerTitleRed: {
-    color: '#E31B23',
+    color: "#E31B23",
   },
   campaignBox: {
     borderWidth: 1,
-    borderColor: '#0000001A',
+    borderColor: "#0000001A",
     marginHorizontal: 28,
     borderRadius: 13,
     padding: 14,
-    width: '90%',
+    width: "90%",
     maxWidth: 340,
   },
   sectionTitle: {
-    color: '#000000',
-    fontWeight: '500',
+    color: "#000000",
+    fontWeight: "500",
     fontSize: 16,
   },
   campaignCard: {
     borderRadius: 13,
     borderWidth: 1,
-    borderColor: '#0000001A',
+    borderColor: "#0000001A",
     marginTop: 14,
     padding: 15,
-    flexDirection: 'column',
+    flexDirection: "column",
     gap: 14,
   },
   progressHeader: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
     gap: 15,
   },
   bloodIconContainer: {
     width: 45,
     height: 45,
     borderRadius: 22.5,
-    backgroundColor: '#E31B2340',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#E31B2340",
+    alignItems: "center",
+    justifyContent: "center",
   },
   progressHeaderTextContainer: {
-    flexDirection: 'column',
+    flexDirection: "column",
   },
   targetText: {
-    color: '#555555',
+    color: "#555555",
     fontSize: 12,
   },
   currentText: {
-    fontWeight: '500',
+    fontWeight: "500",
     fontSize: 18,
-    color: '#000000',
+    color: "#000000",
   },
   progressBarContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 10,
   },
   progressBarBackground: {
     flex: 1,
     height: 14,
-    backgroundColor: '#E8E5E6',
+    backgroundColor: "#E8E5E6",
     borderRadius: 13,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   progressBarFill: {
     height: 14,
-    backgroundColor: '#E31B23',
+    backgroundColor: "#E31B23",
     borderRadius: 13,
   },
   progressPercentText: {
     fontSize: 16,
-    color: '#000000',
-    fontWeight: '500',
+    color: "#000000",
+    fontWeight: "500",
     width: 45,
-    textAlign: 'right',
+    textAlign: "right",
   },
   doadoresContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   avatar: {
     width: 45,
     height: 45,
     borderRadius: 22.5,
     borderWidth: 2,
-    borderColor: '#ffffff',
+    borderColor: "#ffffff",
   },
   avatarOverlap: {
     marginLeft: -10,
   },
   avatarMore: {
-    backgroundColor: '#E8E5E6',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#E8E5E6",
+    alignItems: "center",
+    justifyContent: "center",
   },
   avatarMoreText: {
-    color: '#000000',
+    color: "#000000",
     fontSize: 14,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   buttonList: {
-    flexDirection: 'column',
+    flexDirection: "column",
     gap: 20,
     marginTop: 20,
   },
   campanhaButton: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
     gap: 12,
     paddingHorizontal: 14,
   },
   campanhaButtonIcon: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   campanhaButtonTextContainer: {
-    flexDirection: 'column',
+    flexDirection: "column",
   },
   campanhaButtonTitle: {
-    fontWeight: '500',
+    fontWeight: "500",
     fontSize: 14,
-    color: '#000000',
+    color: "#000000",
   },
   campanhaButtonSubtitle: {
-    color: '#555555',
+    color: "#555555",
     fontSize: 10,
     lineHeight: 14,
   },
