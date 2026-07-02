@@ -26,15 +26,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     overflow: "hidden",
   },
   textContainer: {
     maxWidth: 315,
+    marginTop: 100,
   },
   image: {
     width: 400,
     height: 450,
+    marginTop: 30,
   },
   text: {
     fontSize: 24,
@@ -42,7 +44,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#000000",
     maxWidth: 315,
-    // marginTop: 45,
     marginBottom: 10,
   },
   subtitle: {

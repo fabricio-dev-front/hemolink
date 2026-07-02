@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     gap: 12,
     width: "100%",
     position: "absolute",
-    bottom: "5%",
+    bottom: "10%",
     left: 0,
   },
   dotsContainer: {

@@ -156,13 +156,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     width: "100%",
   },
   headerContainer: {
     maxWidth: "80%",
-    // marginTop: 45,
-    marginBottom: 15,
+    marginTop: 100,
+    marginBottom: 40,
   },
   headerTitle: {
     fontSize: 28,
