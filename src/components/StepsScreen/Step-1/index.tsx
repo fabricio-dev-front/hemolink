@@ -15,7 +15,7 @@ export function Step1() {
       </View>
 
       <Image
-        source={require("../../../assets/img/hand-blood.png")}
+        source={require("../../../assets/img/hand-blood.webp")}
         style={styles.image}
       />
     </View>

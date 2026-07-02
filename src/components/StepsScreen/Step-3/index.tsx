@@ -19,7 +19,7 @@ export function Step3() {
       </View>
 
       <Image
-        source={require("../../../assets/img/mapa.png")}
+        source={require("../../../assets/img/mapa.webp")}
         style={styles.image}
       />
     </View>
